@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Francis Finance App UI Mockup</title>
+    <title>Francis Finance App - Bot Chat Logger</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,68 +33,57 @@
             </div>
         </div>
 
-        <div class="w-full bg-[#FCFBF9] border border-[#EBE7E0] rounded-2xl p-6 shadow-sm transition-all">
+        <div class="w-full bg-[#FCFBF9] border border-[#EBE7E0] rounded-2xl p-6 shadow-sm flex flex-col justify-between space-y-4">
             
-            <div class="text-xs font-bold uppercase tracking-widest text-[#2C2A29]/40 mb-4">Quick Entry Engine</div>
-            
-            <div class="flex gap-2.5 mb-6 overflow-x-auto pb-1">
-                <button class="px-4 py-2 rounded-full border border-[#C97A63] bg-[#C97A63]/10 text-[#C97A63] text-xs font-semibold tracking-wide flex items-center space-x-1.5 shadow-sm">
-                    <span>↗</span> <span>Transaction</span>
-                </button>
-                <button class="px-4 py-2 rounded-full border border-[#EBE7E0] bg-transparent text-[#2C2A29]/60 hover:text-[#2C2A29] hover:bg-[#F7F4F0] text-xs font-medium tracking-wide transition-all">
-                    ↗ Withdrawal
-                </button>
-                <button class="px-4 py-2 rounded-full border border-[#EBE7E0] bg-transparent text-[#2C2A29]/60 hover:text-[#2C2A29] hover:bg-[#F7F4F0] text-xs font-medium tracking-wide transition-all">
-                    ↙ Return
-                </button>
-                <button class="px-4 py-2 rounded-full border border-[#EBE7E0] bg-transparent text-[#2C2A29]/60 hover:text-[#2C2A29] hover:bg-[#F7F4F0] text-xs font-medium tracking-wide transition-all">
-                    ↙ Deposit
-                </button>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
-                
-                <div class="md:col-span-1">
-                    <label class="block text-[11px] font-bold tracking-wider text-[#2C2A29]/50 uppercase mb-2">Amount</label>
-                    <div class="relative flex items-center border border-[#C97A63] rounded-xl bg-[#F7F4F0]/40 shadow-inner">
-                        <span class="pl-4 text-[#2C2A29]/40 font-mono font-medium">$</span>
-                        <input type="text" value="145.20" class="w-full bg-transparent py-3 pr-4 pl-1 font-mono font-bold text-lg focus:outline-none text-[#2C2A29]">
-                    </div>
-                </div>
-
-                <div class="md:col-span-1">
-                    <label class="block text-[11px] font-bold tracking-wider text-[#2C2A29]/50 uppercase mb-2">Category</label>
-                    <div class="relative bg-[#F7F4F0]/40 border border-[#EBE7E0] rounded-xl">
-                        <select class="w-full bg-transparent py-3.5 px-4 focus:outline-none text-sm appearance-none font-medium text-[#2C2A29]">
-                            <option>Food & Dining</option>
-                            <option>Gas & Commute</option>
-                            <option>Subscriptions</option>
-                            <option>Utilities</option>
-                        </select>
-                        <span class="absolute right-4 top-4 text-[#2C2A29]/40 pointer-events-none text-xs">▼</span>
-                    </div>
-                </div>
-
-                <div class="md:col-span-2">
-                    <label class="block text-[11px] font-bold tracking-wider text-[#2C2A29]/50 uppercase mb-2">Notes / Description</label>
-                    <input type="text" value="Target - Weekly grocery run" class="w-full bg-[#F7F4F0]/40 border border-[#EBE7E0] rounded-xl py-3 px-4 focus:outline-none text-sm font-medium text-[#2C2A29]">
+            <div class="flex items-center space-x-3 pb-3 border-b border-[#EBE7E0]/60">
+                <div class="w-9 h-9 rounded-full bg-[#7A8F75] flex items-center justify-center text-white text-sm font-bold">🤖</div>
+                <div>
+                    <div class="text-sm font-bold">Francis Console</div>
+                    <div class="text-[11px] text-[#2C2A29]/50 font-mono">Accepts Discord grammar mapping</div>
                 </div>
             </div>
 
-            <div class="flex justify-between items-center mt-6 pt-4 border-t border-[#EBE7E0]/60">
-                <span class="text-xs text-[#2C2A29]/40 font-mono flex items-center space-x-1.5">
-                    <span class="inline-block w-1.5 h-1.5 rounded-full bg-[#C97A63]"></span>
-                    <span>Ready to parse Discord syntax rules</span>
-                </span>
-                <button class="px-6 py-3 bg-[#2C2A29] hover:bg-[#2C2A29]/90 text-[#FCFBF9] font-semibold text-xs uppercase tracking-wider rounded-xl shadow-md transform hover:-translate-y-0.5 active:translate-y-0 transition-all">
-                    ➕ Sync to Ledger
+            <div class="space-y-4 my-2">
+                <div class="flex items-start space-x-3">
+                    <div class="text-sm bg-[#F7F4F0] p-3 rounded-2xl rounded-tl-none max-w-md">
+                        Ready to sync. Type your transaction shorthand text commands below to write directly to your sheet ledger streams.
+                    </div>
+                </div>
+
+                <div class="bg-[#F7F4F0]/40 border border-[#C97A63]/30 rounded-xl p-4 space-y-3 max-w-xl ml-12 shadow-inner">
+                    <div class="text-xs font-bold uppercase tracking-wider text-[#C97A63] flex items-center space-x-1.5">
+                        <span>↘</span> <span>Staged Log Entry Preview</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-2 text-xs font-medium">
+                        <div><span class="block text-[10px] text-[#2C2A29]/40 uppercase">Amount</span><span class="font-mono font-bold text-sm text-[#C97A63]">$145.20</span></div>
+                        <div><span class="block text-[10px] text-[#2C2A29]/40 uppercase">Category</span><span>Food & Dining</span></div>
+                        <div><span class="block text-[10px] text-[#2C2A29]/40 uppercase">Memo</span><span>Target Grocery Run</span></div>
+                    </div>
+                    <div class="flex justify-end space-x-2 pt-2 border-t border-[#EBE7E0]">
+                        <button class="px-3 py-1.5 border border-[#EBE7E0] hover:bg-white text-[11px] font-medium rounded-lg transition-all">❌ Cancel</button>
+                        <button class="px-3 py-1.5 bg-[#7A8F75] hover:bg-[#7A8F75]/90 text-white text-[11px] font-semibold rounded-lg shadow-sm transition-all">🟢 Confirm & Sync</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap gap-2 pt-1">
+                <button class="px-2.5 py-1 text-[11px] font-mono bg-[#F7F4F0] hover:bg-[#EBE7E0] border border-[#EBE7E0] rounded transition-all text-[#2C2A29]/70">/log 45 gas</button>
+                <button class="px-2.5 py-1 text-[11px] font-mono bg-[#F7F4F0] hover:bg-[#EBE7E0] border border-[#EBE7E0] rounded transition-all text-[#2C2A29]/70">/deposit 2500 payroll</button>
+                <button class="px-2.5 py-1 text-[11px] font-mono bg-[#F7F4F0] hover:bg-[#EBE7E0] border border-[#EBE7E0] rounded transition-all text-[#2C2A29]/70">/return 12 amazon</button>
+                <button class="px-2.5 py-1 text-[11px] font-mono bg-[#F7F4F0] hover:bg-[#EBE7E0] border border-[#EBE7E0] rounded transition-all text-[#2C2A29]/70">/withdraw 100 atm</button>
+            </div>
+
+            <div class="relative flex items-center border border-[#C97A63] rounded-xl bg-white shadow-sm">
+                <span class="pl-4 text-[#2C2A29]/40 font-mono font-bold text-sm">></span>
+                <input type="text" value="/log expense 145.20 groceries target" class="w-full bg-transparent py-3.5 pr-20 pl-2 font-mono text-sm focus:outline-none text-[#2C2A29]">
+                <button class="absolute right-2 px-3 py-1.5 bg-[#2C2A29] hover:bg-[#2C2A29]/90 text-[#FCFBF9] text-xs font-semibold rounded-lg transition-all">
+                    Send
                 </button>
             </div>
         </div>
 
         <div class="bg-[#FCFBF9] border border-[#EBE7E0] rounded-2xl p-6 shadow-sm">
             <div class="text-xs font-bold uppercase tracking-widest text-[#2C2A29]/40 mb-4">Live Sheet Ledger</div>
-            
             <div class="overflow-x-auto">
                 <table class="w-full text-left border-collapse">
                     <thead>
@@ -107,26 +96,12 @@
                         </tr>
                     </thead>
                     <tbody class="text-sm font-medium text-[#2C2A29]/80 divide-y divide-[#EBE7E0]/40">
-                        <tr class="bg-[#C97A63]/5">
-                            <td class="py-3.5"><span class="px-2 py-0.5 text-[10px] font-mono bg-[#C97A63]/20 text-[#C97A63] rounded font-semibold uppercase tracking-wider">Staging</span></td>
-                            <td class="py-3.5 text-[#2C2A29]/50 font-mono text-xs">07/19/2026</td>
-                            <td class="py-3.5 font-semibold text-[#2C2A29]">Target - Weekly grocery run</td>
-                            <td class="py-3.5"><span class="px-2.5 py-1 bg-[#F7F4F0] border border-[#EBE7E0] rounded-md text-xs">Food & Dining</span></td>
-                            <td class="py-3.5 text-right font-mono font-bold text-[#C97A63] tracking-tight">-$145.20</td>
-                        </tr>
                         <tr>
                             <td class="py-3.5"><span class="px-2 py-0.5 text-[10px] font-mono bg-[#7A8F75]/20 text-[#7A8F75] rounded font-semibold uppercase tracking-wider">Synced</span></td>
                             <td class="py-3.5 text-[#2C2A29]/50 font-mono text-xs">07/18/2026</td>
-                            <td class="py-3.5">Bi-Weekly Payroll Deposit</td>
+                            <td class="py-3.5 font-semibold text-[#2C2A29]">Bi-Weekly Payroll Deposit</td>
                             <td class="py-3.5"><span class="px-2.5 py-1 bg-[#F7F4F0] border border-[#EBE7E0] rounded-md text-xs">Income</span></td>
                             <td class="py-3.5 text-right font-mono font-bold text-[#7A8F75] tracking-tight">+$2,400.00</td>
-                        </tr>
-                        <tr>
-                            <td class="py-3.5"><span class="px-2 py-0.5 text-[10px] font-mono bg-[#7A8F75]/20 text-[#7A8F75] rounded font-semibold uppercase tracking-wider">Synced</span></td>
-                            <td class="py-3.5 text-[#2C2A29]/50 font-mono text-xs">07/17/2026</td>
-                            <td class="py-3.5">Amazon Marketplace Return</td>
-                            <td class="py-3.5"><span class="px-2.5 py-1 bg-[#F7F4F0] border border-[#EBE7E0] rounded-md text-xs">Shopping</span></td>
-                            <td class="py-3.5 text-right font-mono font-bold text-[#7A8F75] tracking-tight">+$42.50</td>
                         </tr>
                     </tbody>
                 </table>
